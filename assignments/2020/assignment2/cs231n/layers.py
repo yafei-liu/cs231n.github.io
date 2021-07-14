@@ -70,6 +70,7 @@ def affine_backward(dout, cache):
     dw = x_row.transpose().dot(dout)
 
     db = np.ones((1, dout.shape[0])).dot(dout)
+    db = db.flatten()
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
